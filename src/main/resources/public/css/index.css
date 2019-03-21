@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei", "微软雅黑";
+}
+
+.chTitle {
+    color: #fff;
+    letter-spacing: 12px;
+    font-size: 17px;
+    margin-left: 13px;
+}
+
+.indexTitle {
+    width: 320px;
+    height: 60px;
+    margin: 0 auto;
+    padding-top: 4px;
+}
+
+.cutLine {
+    width: 311px;
+    height: 2px;
+    background: #fff;
+    margin: 3px 0 1px 0;
+}
+
+.enTitle {
+    color: #fff;
+    font-size: 14px;
+}
+
+.logo {
+    border: none;
+    position: absolute;
+    left: 22px;
+    top: 15px;
+    max-width:30%;
+    height:auto;
+}
+
+/*左侧导航栏大标题的图标*/
+.navTitle i {
+    margin-right: 8px;
+    font-size: 19px;
+
+}
+
+/*左侧导航栏小标题的图标*/
+dd i {
+    margin-right: 8px;
+    margin-left: 10px;
+}
+
+.quit:hover {
+    cursor: pointer;
+}
+
+/*右部内容区校正*/
+#admin-body {
+    overflow: hidden;
+    bottom: 0;
+}
+
+.layui-tab {
+    margin: 0;
+    text-align: left !important;
+}
+
+.layui-tab-content {
+    padding: 0px;
+}

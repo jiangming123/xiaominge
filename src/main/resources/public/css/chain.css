@@ -1,0 +1,200 @@
+/*公共样式*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei", "微软雅黑";
+}
+
+/*模态框位置*/
+.modal.fade.in {
+    top: 9%;
+}
+
+/*顶部标题*/
+.addChain {
+    width: 1000px;
+    font-size: 14px;
+    margin: 28px 0;
+}
+
+.head p {
+    background: #f2f8f9;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    font-size: 15px;
+    border-bottom-left-radius: 30px;
+}
+
+.head i {
+    color: #308ee0;
+    font-size: 19px;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+/*顶部查询*/
+.zoneText,
+.meetingText {
+    margin: 0 0 0 30px;
+}
+
+.zonesList,
+.meetingList {
+    min-width: 160px;
+    height: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0 3px;
+    text-align: center;
+    text-align-last: center;
+}
+
+
+
+/*添加*/
+.addChain button {
+    width: 95px;
+    height: 26px;
+    line-height: 12px;
+    color: #fff;
+    background: #00ce68;
+    display: inline-block;
+    padding: 6px 12px;
+    font-weight: normal;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.addNewChain {
+    margin-left: 23px;
+}
+
+.queryChain {
+    margin-left: 30px;
+}
+
+.newChain {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.newChain li {
+    margin-top: 5px;
+}
+
+.zoneNameList,
+.conferenceName,
+.chainType {
+    width: 157px;
+}
+
+/*修改*/
+.amendInfo {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.amendInfo li {
+    margin-top: 10px;
+}
+
+.newChaintype {
+    width: 157px;
+}
+
+.newChainnum {
+    background: #ded7d7;
+}
+
+/*表格*/
+
+.table-responsive {
+    padding: 0 25px;
+}
+
+
+.table tr th {
+    text-align: center;
+}
+
+.table tbody tr td {
+    vertical-align: middle;
+}
+
+.modify {
+    cursor: pointer;
+}
+
+.deleteChain {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.newChain select {
+    margin-left: 6px;
+    width: 160px;
+    height: 25px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0 3px;
+    text-align: center;
+    text-align-last: center;
+}
+
+.chainName {
+    width: 160px;
+    height: 25px;
+    margin-left: 6px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0 3px;
+    text-align: center;
+    text-align-last: center
+}
+
+.newChain li {
+    margin-bottom: 10px;
+}
+
+.newChainnum {
+    width: 160px;
+    height: 25px;
+    margin-left: 6px;
+    cursor: auto;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0 3px;
+    text-align: center;
+    text-align-last: center
+}
+
+.newChainname {
+    width: 160px;
+    height: 25px;
+    margin-left: 6px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0 3px;
+    text-align: center;
+    text-align-last: center
+}
+
+.newChaintype {
+    width: 160px;
+    height: 25px;
+    margin-left: 6px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0 3px;
+    text-align: center;
+    text-align-last: center
+}

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>自动试机试线检测</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../base/bootstrap/css/bootstrap.css">
+    <link href="../base/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../base/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="../css/home.css">
+    <script type="text/javascript" src="../base/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../base/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../base/layui/layui.js"></script>
+    <script type="text/javascript" src="../js/home.js"></script>
+</head>
+
+<body>
+    <!--图示-->
+    <div class="signalBox">
+        <ul class="singal">
+            <li><i class="fa fa-circle normalLight"></i> 正常</li>
+            <li><i class="fa fa-circle faultLight"></i> 故障</li>
+            <li><i class="fa fa-circle abnormalLight"></i> 异常</li>
+        </ul>
+    </div>
+    <div class="setBox">
+        <!--当前会场-->
+        <div class="currentRoomBox">
+            <span class="currentRoom">当前会场：中部战区-会场一</span>
+            <button class="configBtn" data-toggle="modal" data-target="#configChainModal">配置会场通道</button>
+        </div>
+        <!--配置通道按钮-->
+        <div class="currentMode">
+            <span>当前模式：</span>
+            <select class="selectMode">
+                <option>自动试机试线检测</option>
+                <option>实时视频质量评测</option>
+            </select>
+            <div class="currentState">
+                <span>当前状态：</span>
+                <span class="nowState">待机</span>
+                <button class="startMode">启动当前模式</button>
+                <button class="pauseMode">暂停当前模式</button>
+            </div>
+        </div>
+    </div>
+    <!--通道-->
+    <div class="channelBox">
+        <div class="localChannel">
+            <P class="localTitle"><b>本地通道</b></P>
+            <table class=" table   table-bordered  text-center channelTable">
+                <thead>
+                    <tr>
+                        <td class="serialNumber">序号</td>
+                        <td>通道名称</td>
+                        <td class="signalStatus">状态</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--   <tr id="${list[i].chainid}" alt="${list[i].chainstateid}">  
+                        <td>${num}</td>   
+                        <td >${list[i].chainname}</td> 
+                        <td class="currentChainType" style="display:none;">${list[i].chaintype}</td>
+                        <td ><i class="fa fa-circle singalLight view" data-toggle="modal" data-target="#viewChainModal" alt="${i}" title="查看"></i></td> 
+                        </td>
+                        </tr> -->
+                </tbody>
+            </table>
+        </div>
+        <div class="distantChannel">
+            <p class="distantTitle"><b>远端通道</b></p>
+            <table class=" table   table-bordered  text-center channelTable">
+                <thead>
+                    <tr>
+                        <td class="serialNumber">序号</td>
+                        <td>通道名称</td>
+                        <td class="signalStatus">状态</td>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <!--查看通道详情模态框-->
+    <div class="modal fade" id="viewChainModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel2">通道详情</h4>
+                </div>
+                <div class="modal-body modalContent">
+                    <!--                    <div class="layui-row">
+                        <div class="layui-col-md6">
+                            <div class="layui-card">
+                                <div class="layui-card-header"><b>视频通道状态信息</b></div>
+                                <div class="layui-card-body">
+                                    <table class="table table-bordered text-center table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th>项目</td>
+                                                <th>评分</td>
+                                            </tr>
+                                            <tr>
+                                                <td>画面模糊</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>亮度过暗</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>亮度过亮</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>画面偏色</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>对比度过低</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>峰值信噪比</td>
+                                                <td></td>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <div class="layui-card">
+                                <div class="layui-card-header">远端视频状态</div>
+                                <div class="layui-card-body">
+                                    <table class="table table-bordered text-center table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th>项目</th>
+                                                <th>评分</th>
+                                            </tr>
+                                            <tr>
+                                                <td>马赛克</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>黑屏/绿屏</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>停滞</td>
+                                                <td></td>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-col-md6">
+                            <div class="layui-card">
+                                <div class="layui-card-header"><b>网络状态信息</b></div>
+                                <div class="layui-card-body">
+                                    <table class="table table-bordered text-center table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th>状态</th><th>错误</th><th>原因</th>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                     <div class="layui-row">
+                        <div class="layui-col-md12">
+                         <span><b>故障维修建议：</b></span>  <span>${list[currentNum].suggestion}</span>
+                        </div>
+                    </div>
+                     <div class="layui-row" style="margin-top: 20px;">
+                        <div class="layui-col-md12">
+                         <span><b>查看故障关键帧图像：</b></span>  <a href="${list[currentNum].path}"target="_blank">${list[currentNum].path}</a>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--配置通道模态框-->
+    <div class="modal fade bs-example-modal-lg" id="configChainModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close firstClose" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">配置当前会场通道</h4>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <button class="addChainBtn" data-toggle="modal" data-target="#addChainModal">添加通道</button>
+                    </div>
+                    <div>
+                        <table class=" table   table-bordered  text-center ">
+                            <thead>
+                                <tr>
+                                    <th>序号</th>
+                                    <th>通道编号</th>
+                                    <th>通道名称</th>
+                                    <th>通道类型</th>
+                                    <th>所属战区名称</th>
+                                    <th>所属会场名称</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <div class="prompt">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--添加通道模态框-->
+    <div class="modal fade bs-example-modal-lg" id="addChainModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">添加在线通道</h4>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <table class=" table   table-bordered  text-center ">
+                            <thead>
+                                <tr>
+                                    <th>序号</th>
+                                    <th>选择</th>
+                                    <th>通道编号</th>
+                                    <th>通道名称</th>
+                                    <th>通道类型</th>
+                                    <th>所属战区名称</th>
+                                    <th>所属会场名称</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary addNewChain" data-dismiss="modal">确认添加</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

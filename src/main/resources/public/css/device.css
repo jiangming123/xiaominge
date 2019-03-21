@@ -1,0 +1,78 @@
+/*公共样式*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei", "微软雅黑";
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*顶部标题*/
+.head p {
+    background: #36d8ff;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+/*顶部查询区域*/
+.devicePicture{
+    text-align: center;
+}
+.queryBox {
+    font-size: 15px;
+    margin: 20px 0;
+}
+
+.timeSelect {
+    float: left;
+    margin-left: 11px;
+}
+
+#startTime {
+    margin: 0 10px;
+    text-align: center;
+}
+
+#endTime {
+    margin: 0 20px 0 10px;
+    text-align: center;
+
+}
+
+.accountSelect {
+    float: left;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.accountList {
+    margin-left: 10px;
+    width: 100px;
+}
+
+.queryMsg {
+    float: left;
+    width: 70px;
+    height: 32px;
+    margin-top: -4px;
+}
+
+/*表格*/
+
+.table-responsive {
+    padding: 0 10px;
+}
+
+.table tr th {
+    text-align: center;
+}
+
+.table tbody tr td {
+    vertical-align: middle;
+}

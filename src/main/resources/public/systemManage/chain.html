@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>通道管理</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../base/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../base/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../base/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="../css/chain.css">
+    <script type="text/javascript" src="../base/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../base/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../base/layui/layui.js"></script>
+    <script type="text/javascript" src="../js/chain.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="head">
+            <p><b>通道管理</b><i class="fa fa-chain"></i></p>
+        </div>
+        <div class="content">
+            <div class="addChain">
+                <button class="addNewChain" data-toggle="modal" data-target="#addChainModal">添加通道</button>
+                <span class="zoneText">战区</span>
+                <select class="zonesList">
+                </select>
+                <span class="meetingText">会场</span>
+                <select class="meetingList">
+                    <option>全部会场</option>
+                </select>
+                <button class="queryChain">查询</button>
+            </div>
+            <div class="table-responsive">
+                <table class=" table   table-bordered  text-center ">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>通道编号</th>
+                            <th>通道名称</th>
+                            <th>通道类型</th>
+                            <th>所属战区名称</th>
+                            <th>所属会场名称</th>
+                            <th>通道创建时间</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                          <!--     <tr>
+                            <td>1</td>
+                            <td class="theaterId">通道一</td>
+                            <td class="theaterName">类型一</td>
+                            <td class="meetingName">第一战区</td>
+                            <td class="serverIp">会场一</td>
+                            <td>2018-08-08 00:00:01</td>
+                            <td>
+                                <i class="fa fa-edit modify" data-toggle="modal" data-target="#modifyChainModal" title="修改"></i>
+                                <i class="fa fa-trash-o deleteChain" title="删除"></i>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+            <div style="text-align: center;">
+                <span id="layPage"></span>
+            </div>
+        </div>
+    </div>
+    <!--添加通道模态框-->
+    <div class="modal fade" id="addChainModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">添加通道</h4>
+                </div>
+                <div class="modal-body">
+                    <ul class="newChain">
+                        <li><span>所属战区：</span><select class="zoneNameList"></select></li>
+                        <li><span>所属会场：</span><select class="conferenceName"></select></li>
+                        <li><span>通道名称：</span><input class="chainName" type="text"></li>
+                        <li><span>通道类型：</span><select class="chainType">
+                                <option>本地</option>
+                                <option>远端</option>
+                            </select></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary confirmAdd" data-dismiss="modal">确认添加</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消添加</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--修改通道模态框-->
+    <div class="modal fade" id="modifyChainModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel2">修改通道</h4>
+                </div>
+                <div class="modal-body">
+                    <ul class="amendInfo">
+                        <li><span>通道编号：</span><input class="newChainnum" readonly="readonly" type="text"></li>
+                        <li><span>通道名称：</span><input class="newChainname" type="text"></li>
+                        <li><span>通道类型：</span><select class="newChaintype">
+                                <option>本地</option>
+                                <option>远端</option>
+                            </select></li>
+                        <li style="display:none;"><input class="newChainid" type="text"></li>
+                        <li style="display:none;"><input class="newZonename" type="text"></li>
+                        <li style="display:none;"><input class="newConferencename" type="text"></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary confirmAmend" data-dismiss="modal">确认修改</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消修改</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

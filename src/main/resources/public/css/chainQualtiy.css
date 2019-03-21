@@ -1,0 +1,105 @@
+/*公共样式*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei", "微软雅黑";
+}
+
+/*模态框位置*/
+.modal.fade.in {
+    top: 7%;
+}
+
+
+
+/*顶部标题*/
+.head p {
+    background: #f2f8f9;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    font-size: 15px;
+    border-bottom-left-radius: 30px;
+}
+.head i{
+    color:#308ee0;
+    font-size:19px;
+    margin-left:6px;
+    vertical-align: middle;
+}
+.showHead{
+    width: 1000px;
+    font-size: 14px;
+    margin: 28px 0;
+}
+
+
+
+/*表格*/
+
+.table-responsive {
+   padding: 0 25px;
+}
+
+.table tr th {
+    text-align: center;
+}
+
+.table tbody tr td {
+    vertical-align: middle;
+}
+
+.view:hover{
+    cursor:pointer;
+}
+
+/*当前会场名称*/
+.currentConference {
+    padding-left: 10px;
+    font-weight: 900;
+    display: inline-block;
+}
+
+
+.currentMode{
+    display:inline-block;
+    margin-left: 30px
+}
+.selectMode{
+    min-width: 160px;
+    height: 25px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0 3px;
+    text-align: center;
+    text-align-last: center;
+}
+
+.startMode,.pauseMode{
+    width: 120px;
+    height: 26px;
+    margin-left:30px;
+    line-height: 12px;
+    color: #fff;
+    background: #00ce68;
+    display: inline-block;
+    padding: 6px 12px;
+    font-weight: normal;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.currentState{
+    display:inline-block;
+    margin-left:30px;
+}
+
+.nowState{
+    width:100px;
+}
+.errorAdvice{
+    margin-left:16px;
+}

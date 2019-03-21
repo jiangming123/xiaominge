@@ -1,0 +1,156 @@
+/*公共样式*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei", "微软雅黑";
+}
+/*模态框位置*/
+.modal.fade.in{
+        top:9%;  
+    }
+/*删除提示框*/
+.layui-layer-content {
+    text-align: center;
+}
+/*顶部标题*/
+.addMeeting{
+    width: 500px;
+}
+.head p {
+    background: #f2f8f9;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    font-size: 15px;
+    border-bottom-left-radius: 30px;
+}
+
+.head i{
+    color:#308ee0;
+    font-size:19px;
+    margin-left:6px;
+    vertical-align: middle;
+}
+
+/*查询*/
+.query{
+    display:inline-block;
+    margin-left:40px;
+}
+.query select{
+    min-width: 160px;
+    height: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0 3px;
+    text-align: center;
+    text-align-last: center;
+}
+
+/*表格*/
+
+.table-responsive {
+     padding: 0 25px;
+}
+
+.table tr th {
+    text-align: center;
+}
+
+.table tbody tr td {
+    vertical-align: middle;
+}
+.modify{
+    cursor:pointer;
+}
+.deleteMeeting{
+    cursor:pointer;
+    margin-left:10px;
+}
+/*添加*/
+
+.addBtn{
+    margin: 24px 0 24px 24px;
+    width: 95px;
+    height: 26px;
+    line-height: 12px;
+    color: #fff;
+    background: #00ce68;
+    display: inline-block;
+    padding: 6px 12px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.newMeeting{
+    text-align:right;
+}
+.newMeeting li{
+     margin:0 0 10px 0;
+}
+.theaterNameLists{
+    width: 157px;
+}
+
+.addMeetingName,.serverIP{
+      width: 160px;
+    height: 25px;
+    margin-left: 6px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0 3px;
+    text-align: center;
+    text-align-last: center;
+}
+.theaterNameLists{
+    margin-left:6px;
+    width: 160px;
+    height: 25px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0 3px;
+    text-align: center;
+    text-align-last: center;
+}
+/*修改*/
+.amendInfo{
+    text-align: right;
+}
+.amendInfo li{
+    margin:0 0 10px 0;
+}
+.theaterIdLi{
+    display:none;
+}
+.amendTheaterName{
+    background:#ded7d7;
+}
+.amendMeeting,.amendServerip{
+     width: 160px;
+    height: 25px;
+    margin-left: 6px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0 3px;
+    text-align: center;
+    text-align-last: center;
+}
+.amendTheaterName{
+     width: 160px;
+    height: 25px;
+    margin-left: 6px;
+    cursor: auto;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0 3px;
+    text-align: center;
+    text-align-last: center;
+}

@@ -1,0 +1,240 @@
+/*公共样式*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei", "微软雅黑";
+}
+
+
+
+/*图示*/
+.signalBox {
+    width: 151px;
+    height: 137px;
+    border-radius: 5px;
+    background: #f8f8f9;
+    position: relative;
+    left: 15px;
+    top: 15px;
+}
+
+.lineBox {
+    width: 151px;
+    height: 75px;
+    border-radius: 5px;
+    background: #f8f8f9;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+}
+
+.singal {
+    position: absolute;
+    left: 25px;
+    top: 5px;
+}
+
+.singal li {
+    list-style: none;
+    width: 150px;
+    margin: 10px;
+}
+
+.line {
+    position: absolute;
+    left: 15px;
+    top: 5px;
+}
+
+.line li {
+    list-style: none;
+    width: 150px;
+    margin: 10px;
+}
+
+.normalLight {
+    margin-right: 5px;
+    color: green;
+}
+
+.faultLight {
+    margin-right: 5px;
+    color: red;
+}
+
+.abnormalLight {
+    margin-right: 5px;
+    color: orange;
+}
+
+.ununitedLight {
+    margin-right: 5px;
+    color: #6d6868;
+}
+
+.normalLine {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 2px;
+    background: green;
+    margin-right: 10px;
+}
+
+
+.ununitedLine {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 2px;
+    background: #6d6868;
+    margin-right: 10px;
+}
+
+
+/*顶部功能*/
+.currentMode {
+    display: inline-block;
+    position: absolute;
+    left: 102px;
+    width: 620px;
+}
+
+.currentState {
+    display: inline-block;
+    margin-left: 13px;
+}
+
+/*地图*/
+.mapBox {
+    position: absolute;
+    width: 770px;
+    height: 560px;
+    margin-left: -350px;
+    left: 32%;
+    top: 10%;
+}
+
+.mapBox i {
+    color: #6d6868;
+    cursor: pointer;
+}
+
+.mapBox span {
+    color: #e6e61c;
+    font-weight: 700;
+}
+
+.map {
+    width: 770px;
+    height: 560px;
+    position: absolute;
+    left: 170px;
+}
+
+.north {
+    width: 150px;
+    display: inline-block;
+    position: absolute;
+    right: -147px;
+    top: 173px;
+}
+
+.west {
+    width: 150px;
+    display: inline-block;
+    position: absolute;
+    right: 98px;
+    top: 362px;
+}
+
+.east {
+    width: 150px;
+    display: inline-block;
+    position: absolute;
+    right: -127px;
+    top: 306px;
+}
+
+.south {
+    width: 150px;
+    display: inline-block;
+    position: absolute;
+    right: -39px;
+    top: 462px;
+}
+
+.center {
+    width: 150px;
+    display: inline-block;
+    position: absolute;
+    right: -60px;
+    top: 201px;
+}
+
+.ntoc {
+    width: 78px;
+    height: 2px;
+    background: #6d6868;
+    position: absolute;
+    top: 196px;
+    right: -59px;
+    transform: rotate(-18deg);
+}
+
+.wtoc {
+    width: 207px;
+    height: 2px;
+    background: #6d6868;
+    position: absolute;
+    top: 292px;
+    right: 0px;
+    transform: rotate(-45deg);
+}
+
+.etoc {
+    width: 109px;
+    height: 2px;
+    background: #6d6868;
+    position: absolute;
+    top: 262px;
+    right: -65px;
+    transform: rotate(57deg);
+}
+
+.stoc {
+    width: 244px;
+    height: 2px;
+    background: #6d6868;
+    position: absolute;
+    top: 340px;
+    right: -88px;
+    transform: rotate(-85deg);
+}
+
+.configChain {
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    position: relative;
+    left: 400px;
+    bottom: 155px;
+    font-weight: 700;
+}
+
+.currentRoomBox {
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    position: relative;
+    left: 190px;
+    bottom: 123px;
+    font-weight: 700;
+}
+
+
+
+/*弹窗位置*/
+/*.modal.fade.in {
+    right: 150px;
+}*/

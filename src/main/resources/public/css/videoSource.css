@@ -1,0 +1,118 @@
+/*公共样式*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei", "微软雅黑";
+}
+
+
+
+/*顶部标题*/
+.head p {
+     background: #f2f8f9;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    font-size: 15px;
+    border-bottom-left-radius: 30px;
+}
+
+.head i{
+    color:#308ee0;
+    font-size:19px;
+    margin-left:6px;
+    vertical-align: middle;
+}
+/*.content{
+    text-align:center;
+}*/
+
+
+/*视频图片*/
+.videoPhoto{
+    width: 360px;
+    background: #f5f6f7;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 30px;
+    display:inline-block;
+    margin-top: 30px;
+    position:absolute;
+     left: 50%;
+
+}
+
+.videoPhoto img{
+    width:320px;
+    height:300px;
+    border-radius: 30px;
+    box-shadow: 0px 2px 8px 1px #d2d6de;
+    margin-bottom: 10px;    
+}
+
+/*视频格式*/
+.videoMsg{
+     display:inline-block;
+     width: 300px;
+     position:absolute;
+     left: 50%;
+     margin-left: -300px;
+}
+.videoFormat{
+    width:100px;
+     background: #f5f6f7;
+    text-align: center;
+    padding-bottom: 10px;
+    font-size:14px;
+    margin-top: 30px;
+    margin-right: 30px;
+    display:inline-block;
+}
+.videoFormat p{
+    font-weight: bold;
+    margin-bottom: 20px;
+    background: #e3e4ea;
+    padding: 10px 0;
+}
+
+.videoFormat li:hover{
+    cursor:pointer;
+}
+.videoFormat li{
+    margin-bottom: 20px;
+    border: 1px solid #f5f6f7
+}
+
+/*信号列表*/
+.signalList{
+    width:100px;
+     background: #f5f6f7;
+    text-align: center;
+    padding-bottom: 10px;
+    font-size:14px;
+    margin-top: 30px;
+    display:inline-block;
+}
+.signalList p{ 
+    font-weight: bold;
+    margin-bottom: 20px;
+    background: #e3e4ea;
+    padding: 10px 0;
+}
+
+.HDs{
+    display:none;
+}
+.signalList li:hover{
+    cursor:pointer;
+}
+.signalList li{
+    margin-bottom: 20px;
+    border: 1px solid #f5f6f7;
+
+}
+
+.selectedInfo{
+    background:#31d1ea;
+    color:#fff;
+}

@@ -1,0 +1,223 @@
+body {
+    font-family: SimSun;
+}
+
+.loginBox {
+    background: #000111;
+
+}
+
+ul li {
+    list-style: none;
+    margin: 0px auto;
+    font-size: 13px;
+}
+
+.safeCode {
+    letter-spacing: 4px;
+}
+
+.logoBox {
+    margin-top: 0
+}
+
+.msg {
+    height: 15px;
+    margin-bottom: 12px;
+}
+
+hr {
+    width: 243px;
+    margin: 5px auto;
+}
+
+.msg p {
+    display: none;
+    text-align: left;
+    padding-left: 151px;
+    padding-top: 3px;
+    margin: 0;
+}
+
+.msg p span {
+    font-size: 15px;
+}
+
+.login_logo {
+    color: #fff;
+    width: 478px;
+    border: 1px solid #fff;
+    height: 45px;
+    background: #16163E;
+    font-size: 16px;
+    padding: 10px 0 10px 0;
+}
+
+.login_logo p {
+    margin: 0;
+    font-size: 20px;
+    line-height: 42px;
+    font-family: SimHei;
+}
+
+.chinese {
+    letter-spacing: 4px;
+}
+
+.engilsh {
+    font-size: 15px;
+}
+
+.loginInnerBox {
+    width: 480px;
+    position: absolute;
+    height: 260px;
+    background: #f7f7f7;
+    overflow: hidden;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    margin-left: -253px;
+    margin-top: -164px;
+}
+
+.loginInnerBox ul {
+    padding: 0;
+    margin-top: 0px;
+}
+
+.loginInnerBox h2 {
+    color: #4f5d80;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 11px;
+}
+
+
+#username,
+#userpwd {
+    width: 225px;
+    height: 30px;
+    border: 1px solid #cad2db;
+    padding: 0 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    line-height: 36px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #717171;
+    font-family: SimSun;
+}
+
+#code_input {
+    width: 100px;
+    height: 30px;
+    border: 1px solid #cad2db;
+    padding: 0 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    line-height: 36px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #717171;
+    font-family: Arial;
+    margin-left: 8px;
+}
+
+#CAPTCHA {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 2px;
+}
+
+#CAPTCHA #verifyCanvas {
+
+    height: 30px;
+    width: 118px;
+}
+
+
+.autoLogin {
+    height: 30px;
+}
+
+#remember {
+    vertical-align: middle;
+    margin: 0 0 3px 0;
+    margin-left: 28px;
+}
+
+.forgetPwd {
+    color: #4f5d80;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+    left: 50px;
+    top: 3px;
+}
+.loginBtn{
+    margin-top:10px;
+}
+.login_button {
+    width: 117px;
+    height: 25px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.copyright {
+    font-size: 13px;
+    color: #908f8f;
+    font-family: SimSun;
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    text-align: center;
+    display: none;
+}
+
+.downloadBox {
+    padding: 15% 0;
+    font-size: 17px;
+}
+
+.download {
+    width: 100px;
+    height: 30px;
+}
+
+input::-webkit-input-placeholder {
+    color: #adabab;
+}
+
+input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #adabab;
+}
+
+input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #adabab;
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #adabab;
+}
+
+.right {
+    font-size: 20px;
+    position: relative;
+    top: 3px;
+}

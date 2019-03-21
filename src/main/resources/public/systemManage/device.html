@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>设备管理</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../base/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../base/css/paging.css">
+    <link rel="stylesheet" type="text/css" href="../css/device.css">
+    <script type="text/javascript" src="../base/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../base/bootstrap/js/bootstrap.js"></script>
+    <script src="../base/js/paging.js"></script>
+    <script type="text/javascript" src="../base/laydate/laydate.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="head">
+            <p><b>设备管理</b></p>
+        </div>
+        <div class="content">
+            <div class="devicePicture">
+                <img src="../images/device1.png">    
+            </div>
+
+            <div class="queryBox clearfix">
+                <div class="timeSelect">
+                    <span>时间</span>
+                    <input type="text" class="demo-input" placeholder="开始时间" id="startTime">
+                    <span>至</span>
+                    <input type="text" class="demo-input" placeholder="结束时间" id="endTime">
+                </div>       
+
+                 <button type="button" class="queryMsg btn  btn-success">查询</button>
+                
+            </div>
+            <div class="table-responsive">
+                <table class=" table table-bordered table-striped table-hover text-center">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>通道名称</th>
+                            <th>矩阵输入</th>
+                            <th>矩阵输出</th>
+                            <th>检测时间</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="001">
+                            <td>1</td>
+                            <td>通道一</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>2018-08-08 00:00:01</td>
+                            <td>正常</td>
+                            <td><button class="btn btn-info">查询</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pagger-box pagger" id="box"></div>
+        </div>
+    </div>
+</body>
+
+</html>

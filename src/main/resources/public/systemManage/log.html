@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>日志管理</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../base/bootstrap/css/bootstrap.css">
+    <link href="../base/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../base/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="../css/log.css">
+    <script type="text/javascript" src="../base/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../base/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../base/layui/layui.js"></script>
+    <script type="text/javascript" src="../js/log.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="head">
+            <p><b>日志管理</b><i class="fa fa-book"></i></p>
+        </div>
+        <div class="content">
+            <div class="queryBox clearfix">
+                <div class="timeSelect">
+                    <span>时间</span>
+                    <input type="text" class="demo-input" placeholder="开始时间" id="startTime">
+                    <span>-</span>
+                    <input type="text" class="demo-input" placeholder="结束时间" id="endTime">
+                </div>
+                <div class="accountSelect">
+                    <span>操作账户</span>
+                    <select class="accountList">
+                        <option>全部账户</option>
+                    </select>
+                </div>
+                <button type="button" class="queryMsg">查询</button>
+            </div>
+            <div class="table-responsive">
+                <table class=" table   table-bordered  text-center ">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>日志ID</th>
+                            <th>账号</th>
+                            <th>操作时间</th>
+                            <th>操作内容</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--  <tr id="001">
+                            <td>1</td>
+                            <td>111</td>
+                            <td>admin</td>
+                            <td>2018-08-08</td>
+                            <td>系统登录</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+            <div style="text-align: center;">
+                <span id="layPage"></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

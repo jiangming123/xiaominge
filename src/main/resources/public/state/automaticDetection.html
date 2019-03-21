@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>自动试机试线检测</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../base/bootstrap/css/bootstrap.css">
+    <link href="../base/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../base/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="../css/automaticDetection.css">
+    <script type="text/javascript" src="../base/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../base/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../base/layui/layui.js"></script>
+    <script type="text/javascript" src="../js/automaticDetection.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="head">
+            <p><b>自动试机试线检测 </b></p>
+        </div>
+        <div class="content">
+            <div class="table-responsive">
+                <p class="currentConference" alt="">第一战区 第一会场 通道检测</p>
+                <table class="table table-bordered text-center">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>通道名称</th>
+                            <th>通道类型</th>
+                            <th>通道状态</th>
+                            <th>远端视频状态</th>
+                            <th>网络状态信息</th>
+                            <th>视频通道状态信息</th>
+                            <th>检测时间点</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+ <!--                        <tr>
+                            <td>1</td>
+                            <td>通道一</td>
+                            <td>类型一</td>
+                            <td>第一战区</td>
+                            <td>会场一</td>
+                            <td>test</td>
+                            <td>test</td>
+                            <td>2018-08-08 00:00:01</td>
+                            <td>
+                                <i class="fa fa-edit view" data-toggle="modal" data-target="#viewChainModal" alt="1" title="查看">
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+            <div style="text-align: center;">
+                <span id="layPage"></span>
+            </div>
+        </div>
+    </div>
+    <!--查看通道模态框-->
+    <div class="modal fade" id="viewChainModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel2">通道详情</h4>
+                </div>
+                <div class="modal-body modalContent">
+                    <!-- <div class="layui-row">
+                        <div class="layui-col-md4">
+                            <div class="layui-card">
+                                <div class="layui-card-header">视频通道状态信息</div>
+                                <div class="layui-card-body">
+                                    <table class="table table-bordered text-center table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th>项目</td>
+                                                <th>评分</td>
+                                            </tr>
+                                            <tr>
+                                                <td>画面模糊</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>亮度过暗</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>亮度过亮</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>画面偏色</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>对比度过低</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>峰值信噪比</td>
+                                                <td></td>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <div class="layui-card">
+                                <div class="layui-card-header">远端视频状态</div>
+                                <div class="layui-card-body">
+                                    <table class="table table-bordered text-center table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th>项目</th>
+                                                <th>评分</th>
+                                            </tr>
+                                            <tr>
+                                                <td>马赛克</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>黑屏/绿屏</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>停滞</td>
+                                                <td></td>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <div class="layui-card">
+                                <div class="layui-card-header">网络状态信息</div>
+                                <div class="layui-card-body">
+                                    <table class="table table-bordered text-center table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th>状态</th><th>错误</th><th>原因</th>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

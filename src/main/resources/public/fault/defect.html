@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>缺陷统计</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../base/bootstrap/css/bootstrap.css">
+    <link href="../base/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../base/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="../css/defect.css">
+    <script type="text/javascript" src="../base/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../base/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../base/layui/layui.js"></script>
+    <script type="text/javascript" src="../base/js/echarts.js"></script>
+    <script type="text/javascript" src="../js/defect.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="head">
+            <p><b>缺陷统计</b><i class="fa fa-clock-o"></i></p>
+        </div>
+        
+        <div class="timeBox">
+            <span>时间</span>
+            <select class="timeQuery">
+                <option>最近7天</option>
+                <option>最近30天</option>
+            </select>
+            <button class="chartQuery">查询</button>
+            <span>时间</span>
+            <input type="text" class="demo-input" placeholder="开始时间" id="startTime">
+            <span>-</span>
+            <input type="text" class="demo-input" placeholder="结束时间" id="endTime">
+            <button type="button" class="queryMsg">查询</button>
+        </div>
+        <div class="scopeBox">
+            <span>当前查询日期范围：</span>
+            <span class="timeScope">无</span>
+        </div>
+        <div class="tipBox">
+            <p class="msgTips">查询时间范围内没有数据！</p>
+        </div>
+
+        <i class="fa fa-exchange changeChart" aria-hidden="true" alt="bar" title="切换饼状图"></i>
+        <div id="barContent">
+        </div>
+        <div id="pieContent">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>账户管理</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../base/bootstrap/css/bootstrap.css">
+    <link href="../base/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../base/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="../css/account.css">
+    <script type="text/javascript" src="../base/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../base/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../base/layui/layui.js"></script>
+    <script type="text/javascript" src="../js/account.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="head">
+            <p><b>账号管理</b><i class="fa fa-user"></i></p>
+        </div>
+        <div class="content">
+            <div class="addAccount">
+                <button class="addBtn" data-toggle="modal" data-target="#addUserModal">添加账户
+                </button>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordered text-center">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>账号</th>
+                            <th>密码</th>
+                            <th>角色</th>
+                            <th>最近一次登陆时间</th>
+                            <th>最近一次登录计算机IP</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                  <!--   <tr id="001">
+                        <td>1</td>
+                        <td class="accountName">admin</td>
+                        <td class="accountPass">123456</td>
+                        <td class='role'>系统管理员</td>
+                        <td>2018-08-08 00:00:01</td>
+                        <td>192.168.1.1</td>
+                        <td>
+                            <i class="fa fa-edit modify" data-toggle="modal" data-target="#modifyUserModal" title="修改"></i>
+                            <i class="fa fa-trash-o deleteUser" title="删除"></i>
+                        </td>
+                    </tr> -->
+                    </tbody>
+                </table>
+            </div>
+            <div style="text-align: center;">
+                <span id="layPage"></span>
+            </div>
+        </div>
+    </div>
+    <!--添加用户模态框-->
+    <div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">添加用户</h4>
+                </div>
+                <div class="modal-body">
+                    <ul class="newUser">
+                        <li><span>账户名称：</span><input class="userName" type="text"></li>
+                        <li><span>账户密码：</span><input class="userPassword" type="text"></li>
+                        <li><span>账户权限：</span>
+                            <select class="userRole">
+                                <option>普通用户</option>
+                                <option>系统管理员</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary confirmAdd" data-dismiss="modal">确认添加</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消添加</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--修改用户模态框-->
+    <div class="modal fade" id="modifyUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel2">修改用户</h4>
+                </div>
+                <div class="modal-body">
+                    <ul class="amendInfo">
+                        <li><span>账户名称：</span><input class="amendName" type="text" disabled="disabled"></li>
+                        <li><span>账户密码：</span><input class="amendPass" type="text"></li>
+                        <li><span>账户权限：</span>
+                            <select class="amendRole">
+                                <option>普通用户</option>
+                                <option>系统管理员</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary confirmAmend" data-dismiss="modal">确认修改</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消修改</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
